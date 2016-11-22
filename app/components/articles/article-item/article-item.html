@@ -1,0 +1,24 @@
+<div class="news-item"
+     ng-click="articleItemCtrl.selected({article:articleItemCtrl.article})"
+>
+    <div class="image-wrap">
+        <img src="{{articleItemCtrl.article.image}}">
+    </div>
+
+    <div class="text-wrap">
+      <div class="other-wrap">
+          <div class="date">
+              <h4>Datum</h4>
+              {{articleItemCtrl.article.date}}
+          </div>
+      </div>
+        <h2>{{articleItemCtrl.article.title}}</h2>
+        <div class="deco-line"></div>
+        <p>{{articleItemCtrl.article.teaser}}</p>
+
+        <button class="more-btn">Läs mer</button>
+    </div>
+
+
+
+</div>

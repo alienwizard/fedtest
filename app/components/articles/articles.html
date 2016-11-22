@@ -1,0 +1,12 @@
+<!--HTML FÖR NYHETSGRID-->
+<div id="news_grid">
+  <div class="row">
+    <div class="top-line"></div>
+      <article-item
+          ng-repeat="article in ArticlesGridCtrl.articles"
+          ng-class="{first:$first, leftBig:$index == 1}"
+          selected="ArticlesGridCtrl.onArticleSelected(article)"
+          article="article">
+      </article-item>
+    </div>
+</div>

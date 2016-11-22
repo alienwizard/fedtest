@@ -1,0 +1,159 @@
+$mainColor: #ff2d1e;
+
+@import 'animations';
+
+
+article-item{
+  position: relative;
+
+  .date{
+
+  }
+
+  img{
+    width:100%;
+    height: auto;
+
+  }
+
+}
+
+article-item.ng-isolate-scope{
+  height: 50vh;
+  position: relative;
+  width: 30%;
+  float: right;
+
+  .deco-line{
+    display: none;
+  }
+
+  .other-wrap{
+    position: initial;
+    bottom: 0px;
+    width: 6vw;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+margin-bottom: 10px;
+
+    h4{
+      display: none;
+    }
+  }
+
+  img{
+
+  }
+
+  .more-btn{
+    display: none;
+  }
+
+}
+
+
+//Left big news
+article-item.ng-isolate-scope.leftBig{
+  height: 100vh;
+  position: relative;
+  display: block;
+  width: 60%;
+  float: left;
+
+  .text-wrap{
+
+  }
+  img{
+    left: 0vw;
+    right: 0px;
+    width: 100%;
+    //position: absolute;
+  }
+}
+
+//The first showcase news item
+
+article-item.ng-isolate-scope.first{
+
+  position: relative;
+  width: 100%;
+  float: none;
+  margin: auto;
+  height:100vh;
+  display: block;
+
+  .date.ng-binding{
+    position: absolute;
+  }
+
+  .more-btn{
+    display: block;
+  }
+
+  .text-wrap{
+    position: absolute;
+    top: calc(50% - 2px);
+
+    &:hover{
+      h2{
+        color: #a3adb9;
+      }
+
+      p{
+        color: $mainColor;
+      }
+    }
+
+    h2 {
+      position: absolute;
+      bottom: calc(10px + 1vw);
+      left: 0px;
+      width: 30vw;
+      line-height: 120%;
+      letter-spacing: -1px;
+      color: $mainColor;
+      display: inline-block;
+      font-size: 50px;
+      text-align: left;
+      transition: 0.4s ease all;
+    }
+    p{
+      display: inline-block;
+      position: absolute;
+      line-height: 180%;
+      color: #a3adb9;
+      font-size: calc(.4rem + .718vw);
+      transform: translate3d(0,100%,0);
+      top: calc(-10px - 5vw);
+      left: 8vw;
+      width: 25vw;
+      text-align: left;
+      transition: 0.4s ease all;
+    }
+    .other-wrap{
+      position: absolute;
+      bottom: 0px;
+      width: 6vw;
+      bottom: calc(10px + -1vw);
+      margin: 0px;
+    }
+  }
+
+  img{
+    width: 50vw;
+    height:auto;
+    left:45%;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    transform: translate3d(0,-50%,0);
+  }
+
+  .deco-line{
+    display: block;
+  }
+
+}
+
+@import 'responsive.scss'
